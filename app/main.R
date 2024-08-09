@@ -20,7 +20,7 @@ ui <- function(id) {
     ),
     pageSectionImage(
       center = TRUE,
-      img = "static/img/reading.jpg",
+      img = "static/img/coding.jpg",
       menu = "home",
       h1(
         class = "header shadow-dark",
@@ -28,7 +28,7 @@ ui <- function(id) {
       ),
       h3(
         class = "light footer",
-        "by", tags$a("Intelligencia", href = "https://google.com", class = "link")
+        "by", tags$a("Bartosz Stadnik", href = "https://www.linkedin.com/in/bartosz-stadnik-2084a2168/", class = "link")
       )
     ),
     pageSection(
@@ -59,8 +59,8 @@ server <- function(id) {
     output$title <- renderTyped(
       typed(
         strings = c(
-          "Intelligencia",
-          "Partner of your future..."
+          "Bartosz Stadnik",
+          "Where Ideas Become Reality..."
         ),
         typeSpeed = 45,
         smartBackspace = TRUE
