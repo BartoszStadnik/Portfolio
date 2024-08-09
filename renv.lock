@@ -472,6 +472,22 @@
       ],
       "Hash": "15aeb8c27f5ea5161f9f6a641fafd93a"
     },
+    "fullPage": {
+      "Package": "fullPage",
+      "Version": "0.1.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "fullPage",
+      "RemoteUsername": "RinteRface",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "4657d86a0cf43bb6b2451f5ee34b2410656bae0d",
+      "Requirements": [
+        "jsonlite",
+        "shiny"
+      ],
+      "Hash": "492a48b1eb5fc083cf9dda16616e7fa6"
+    },
     "generics": {
       "Package": "generics",
       "Version": "0.1.3",
@@ -1235,6 +1251,23 @@
         "R"
       ],
       "Hash": "114b750618be4fe137355007cf47c450"
+    },
+    "typedjs": {
+      "Package": "typedjs",
+      "Version": "0.0.3",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "typedjs",
+      "RemoteUsername": "JohnCoene",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "cc15e55ef98d5744175500fa6f5238cfd77b5442",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets",
+        "purrr"
+      ],
+      "Hash": "3fae95d4f82a53513f4e9614358f8965"
     },
     "utf8": {
       "Package": "utf8",
