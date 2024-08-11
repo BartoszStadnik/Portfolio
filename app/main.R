@@ -83,7 +83,7 @@ server <- function(id) {
       )
     )
 
-    resume$server(session$ns("section1"))
+    resume$server("section1")
 
   })
 

@@ -12,12 +12,14 @@ ui <- function(id) {
         #class = "main-text",
         shiny$h1(
             class = "header shadow-dark",
-            "Hey, I'm Bartosz Stadnik"
+
+            "There is my CV:"
         ),
         # add download CV button
         shiny$downloadButton(
             outputId = ns("download_cv_button"), 
-            label = "Download data"
+            label = "Download data",
+            class = "download-cv-btn"
         ),
 
         # remove disabled attribute from download button
