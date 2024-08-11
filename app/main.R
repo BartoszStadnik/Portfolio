@@ -1,20 +1,21 @@
 box::use(
-  shiny[moduleServer, NS, fluidRow, icon, tags, includeHTML, h1, h2, h3],
-  fullPage[pagePiling, pageSectionImage, pageSection],
-  typedjs[typedOutput, renderTyped, typed]
+  fullPage[fullSlideImage, pagePiling, pageSection, pageSectionImage],
+  shiny[div, h1, h2, h3, includeHTML, img, moduleServer, NS, tags],
+  typedjs[renderTyped, typed, typedOutput],
 )
 
+box::use(
+  app/view/resume
+)
 
 #' @export
 ui <- function(id) {
   ns <- NS(id)
 
   pagePiling(
-    sections.color = c('#2f2f2f', '#2f2f2f', '#f9f7f1', '#2f2f2f'),
+    sections.color = c("#2f2f2f", "#2f2f2f", "#f9f7f1", "#2f2f2f"),
     menu = c(
       "Home" = "home",
-      # "Map" = "map",
-      # "Series" = "ts",
       "About" = "about",
       "Section1" = "section1"
     ),
@@ -28,23 +29,38 @@ ui <- function(id) {
       ),
       h3(
         class = "light footer",
-        "by", tags$a("Bartosz Stadnik", href = "https://www.linkedin.com/in/bartosz-stadnik-2084a2168/", class = "link")
+        "by",
+        tags$a(
+          "Bartosz Stadnik",
+          href = "https://www.linkedin.com/in/bartosz-stadnik-2084a2168/",
+          class = "link"
+        )
       )
     ),
     pageSection(
       center = TRUE,
       menu = "about",
       h1("About", class = "header shadow-dark"),
-      h2(
-        class = "light",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      div(
+        style = "margin-left: 20px; margin-right: 20px; text-align: justify;",
+        h3(
+          class = "light",
+          "I am a seasoned developer with nearly 6 years of experience in the insurance industry, 
+          transitioning from an analyst role to a developer. 
+          For the past 5 years, I've specialized in R, 
+          focusing on building Shiny applications that drive business decisions. Recently, 
+          I've expanded my role to include 
+          supporting architecture and process management around Shiny. 
+          My goal is to create innovative, efficient solutions that not only meet current needs 
+          but also pave the way for future advancements."
+        )
       ),
       includeHTML("app/static/html/about.html")
     ),
     pageSection(
       center = TRUE,
       menu = "section1",
-      includeHTML("app/static/html/main.html")
+      resume$ui(ns("section1"))
     )
   )
 
@@ -67,11 +83,8 @@ server <- function(id) {
       )
     )
 
+    resume$server(session$ns("section1"))
+
   })
 
 }
-
-
-
-
-
