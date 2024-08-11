@@ -1,0 +1,10 @@
+name: portfolio
+title:
+username: bartosz-stadnik
+account: bartosz-stadnik
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12437229
+bundleId: 8970891
+url: https://bartosz-stadnik.shinyapps.io/portfolio/
+version: 1
