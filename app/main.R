@@ -13,11 +13,11 @@ ui <- function(id) {
   ns <- NS(id)
 
   pagePiling(
-    sections.color = c("#2f2f2f", "#2f2f2f", "#f9f7f1", "#2f2f2f"),
+    sections.color = c("#2f2f2f", "#2f2f2f", "#1f1e1e"),
     menu = c(
       "Home" = "home",
       "About" = "about",
-      "Section1" = "section1"
+      "CV" = "cv"
     ),
     pageSectionImage(
       center = TRUE,
@@ -59,8 +59,8 @@ ui <- function(id) {
     ),
     pageSection(
       center = TRUE,
-      menu = "section1",
-      resume$ui(ns("section1"))
+      menu = "cv",
+      resume$ui(ns("cv"))
     )
   )
 
@@ -83,7 +83,7 @@ server <- function(id) {
       )
     )
 
-    resume$server("section1")
+    resume$server("cv")
 
   })
 

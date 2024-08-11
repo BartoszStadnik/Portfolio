@@ -25,7 +25,7 @@ ui <- function(id) {
         # remove disabled attribute from download button
         tags$script(shiny$HTML("
             $(document).on('shiny:connected', function() {
-            $('#app-section1-download_cv_button').removeClass('disabled').attr('aria-disabled', 'false');
+            $('#app-cv-download_cv_button').removeClass('disabled').attr('aria-disabled', 'false');
             });
         ")),
     )
