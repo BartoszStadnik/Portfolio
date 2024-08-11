@@ -76,7 +76,7 @@ server <- function(id) {
       typed(
         strings = c(
           "Bartosz Stadnik",
-          "Where Ideas Become Reality..."
+          "Code that Speaks, Designs that Connect..."
         ),
         typeSpeed = 45,
         smartBackspace = TRUE
